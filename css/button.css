@@ -10,6 +10,10 @@
 -------------------------------------------------------------------------------
 <button type="submit" class="button button--orange" autofocus=true>文字 </button>
 -------------------------------------------------------------------------------
+・白色
+-------------------------------------------------------------------------------
+<button type="submit" class="button button--white" autofocus=true>文字 </button>
+-------------------------------------------------------------------------------
 ・水色
 -------------------------------------------------------------------------------
 <button type="submit" class="button button--lightblue" autofocus=true>文字 </button>
@@ -28,7 +32,7 @@ a.button--orange {
   color: #fff;
   background-color: #f67e28;
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   border: none;
   font-weight: bold;
@@ -43,6 +47,31 @@ a.button--orange:hover {
 
 /***************************************************
 *
+*　　　　　　　　　白＋オレンジのボタン
+*
+***************************************************/
+/*通常時*/
+.button--white,
+a.button--white {
+  color: #f67e28;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  border-style: solid;
+  border-color: #f67e28;
+  font-weight: bold;
+}
+
+/*カーソルが乗っている時*/
+.button--orange:hover,
+a.button--orange:hover {
+  color: #f59048;
+  background: #fff;
+}
+
+/***************************************************
+*
 *　　　　　　　　　水色のボタン
 *
 ***************************************************/
@@ -52,7 +81,7 @@ a.button--lightblue {
   color: #fff;
   background-color: #00aaeb;
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   border: none;
   font-weight: bold;
