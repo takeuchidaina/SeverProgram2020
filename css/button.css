@@ -1,0 +1,67 @@
+/**********************************************************************************
+【概要】
+各種ボタン
+
+【CSSの読み込み】
+<link rel="stylesheet" href="AMS/css/button.css">
+ 
+【クラスの呼び出し】
+・オレンジ色
+-------------------------------------------------------------------------------
+<button type="submit" class="button button--orange" autofocus=true>文字 </button>
+-------------------------------------------------------------------------------
+・水色
+-------------------------------------------------------------------------------
+<button type="submit" class="button button--lightblue" autofocus=true>文字 </button>
+-------------------------------------------------------------------------------
+
+**********************************************************************************/
+
+/***************************************************
+*
+*　　　　　　　　　オレンジのボタン
+*
+***************************************************/
+/*通常時*/
+.button--orange,
+a.button--orange {
+  color: #fff;
+  background-color: #f67e28;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+}
+
+/*カーソルが乗っている時*/
+.button--orange:hover,
+a.button--orange:hover {
+  color: #fff;
+  background: #f59048;
+}
+
+/***************************************************
+*
+*　　　　　　　　　水色のボタン
+*
+***************************************************/
+/*通常時*/
+.button--lightblue,
+a.button--lightblue {
+  color: #fff;
+  background-color: #00aaeb;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+}
+
+/*カーソルが乗っている時*/
+.button--lightblue:hover,
+a.button--lightblue:hover {
+  color: #fff;
+  background: #33b4e7;
+}
+
