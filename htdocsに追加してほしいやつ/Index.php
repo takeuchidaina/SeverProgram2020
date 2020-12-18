@@ -8,7 +8,7 @@ session_start();
 
 //$_SESSION["aaa"] = 1;
 
-require 'LogIn.php';
+require '../AMS/LogIn.php';
 /*
 unset($_SESSION["aaa"]);
 $_SESSION = array(); //データ消去
