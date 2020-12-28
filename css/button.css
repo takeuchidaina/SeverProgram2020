@@ -3,20 +3,24 @@
 各種ボタン
 
 【CSSの読み込み】
-<link rel="stylesheet" href="AMS/css/button.css">
+<link rel="stylesheet" href="../css/button.css">
  
 【クラスの呼び出し】
 ・オレンジ色
 -------------------------------------------------------------------------------
 <button type="submit" class="button button--orange" autofocus=true>文字 </button>
 -------------------------------------------------------------------------------
-・白色
+・白色+オレンジ色
 -------------------------------------------------------------------------------
-<button type="submit" class="button button--white" autofocus=true>文字 </button>
+<button type="submit" class="button button--whiteOrange" autofocus=true>文字 </button>
 -------------------------------------------------------------------------------
 ・水色
 -------------------------------------------------------------------------------
 <button type="submit" class="button button--lightblue" autofocus=true>文字 </button>
+-------------------------------------------------------------------------------
+・白色+水色
+-------------------------------------------------------------------------------
+<button type="submit" class="button button--whiteLightblue" autofocus=true>文字 </button>
 -------------------------------------------------------------------------------
 
 **********************************************************************************/
@@ -51,8 +55,8 @@ a.button--orange:hover {
 *
 ***************************************************/
 /*通常時*/
-.button--white,
-a.button--white {
+.button--whiteOrange,
+a.button--whiteOrange {
   color: #f67e28;
   background-color: #fff;
   border-radius: 5px;
@@ -64,8 +68,8 @@ a.button--white {
 }
 
 /*カーソルが乗っている時*/
-.button--orange:hover,
-a.button--orange:hover {
+.button--whiteOrange:hover,
+a.button--whiteOrange:hover {
   color: #f59048;
   background: #fff;
 }
@@ -94,3 +98,27 @@ a.button--lightblue:hover {
   background: #33b4e7;
 }
 
+/***************************************************
+*
+*　　　　　　　　　白＋水色のボタン
+*
+***************************************************/
+/*通常時*/
+.button--whiteLightblue,
+a.button--whiteLightblue {
+  color: #00aaeb;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  border-style: solid;
+  border-color: #00aaeb;
+  font-weight: bold;
+}
+
+/*カーソルが乗っている時*/
+.button--whiteLightblue:hover,
+a.button--whiteLightblue:hover {
+  color: #33b4e7;
+  background: #fff;
+}
