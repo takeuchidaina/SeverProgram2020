@@ -34,6 +34,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 //IDが一致しない場合
 if (!isset($row['Employees_Num'])) {
   echo 'ID又はパスワードが間違っています。1';
+  require 'LogIn.php';
   return false;
 }
 
@@ -42,9 +43,10 @@ if (!isset($row['Employees_Num'])) {
 if($_POST['Pass'] == $row['Password']){
   session_regenerate_id(true); //session_idを新しく生成し、置き換える
   $_SESSION['ID'] = $row['ID'];
-  echo 'ログインしました';
+  require 'MyPage.php';
 } else {
   echo 'ID又はパスワードが間違っています。2';
+  require 'LogIn.php';
   return false;
 }
 
