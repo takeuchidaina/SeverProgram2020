@@ -10,12 +10,15 @@
       </span>
 
       <span class="center">
-        ○○勤務時間管理システム
+        AMS勤務時間管理システム
       </span>
 
       <span class="right">
         ページ更新<br>
-        2020/01/01 00:00 <!--time-->
+        <?php
+        date_default_timezone_set('Asia/Tokyo');
+        echo date("Y/m/d H:i");
+        ?>
       </span>
     </div>
 
