@@ -1,41 +1,35 @@
-.input--basic,
-a.input--basic{
-    border:0;
-    padding:10px;
-    font-size:1.3em;
-    font-family:Arial, sans-serif;
-    color:rgb(255, 255, 255);
-    border:solid 1px #ccc;
-    margin:0 0 20px;
-    width:300px;
+/**********************************************************************************
+【概要】
+入力部のデザイン
+
+【CSSの読み込み】
+HTML : <link rel="stylesheet" href="../css/Input.css">
+CSS  : @import url("../css/Input.css");
+
+【クラスの呼び出し】
+通常のinputが全て変わります
+通常通り使えばOK
+
+**********************************************************************************/
+
+/***************************************************
+*       変数宣言
+***************************************************/
+@import url("../css/VariableDeclaration.css");
+
+input[type="text"]{
+    border: 1px solid;
+    border-color: var(--color-lb);
+    background-color:#fff;
+    
+    height: 25px;
+    width: 200px;
 }
 
-.input--basic:focus,
-a.input--basic:focus {
-    border:solid 10px #EEA34A;
-}
+input[type="text"]:focus{
+    border: 1px solid;
+    border-color: var(--color-lb);
+    background-color:#fff;
 
-
-
-
-.cp_iptxt {
-	position: relative;
-	width: 80%;
-	margin: 40px 3%;
-}
-.cp_iptxt input[type='text'] {
-	font: 15px/24px sans-serif;
-	box-sizing: border-box;
-	width: 100%;
-	padding: 0.3em;
-	transition: 0.3s;
-	letter-spacing: 1px;
-	color: #aaaaaa;
-	border: 1px solid #1b2538;
-	border-radius: 4px;
-}
-.ef input[type='text']:focus {
-	border: 1px solid #da3c41;
-	outline: none;
-	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+    outline: none;
 }

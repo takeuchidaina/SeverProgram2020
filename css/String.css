@@ -1,0 +1,117 @@
+/**********************************************************************************
+【概要】
+文字のデザイン
+
+【CSSの読み込み】
+HTML : <link rel="stylesheet" href="../css/String.css">
+CSS  : @import url("../css/String.css");
+
+【クラス一覧】
+背景付文字(サイズ固定)
+---------------------------
+class="string--bg"
+---------------------------
+背景付文字(サイズ可変)
+---------------------------
+class="string--bg--fit"
+---------------------------
+文字色付け(水色)
+---------------------------
+class="string--color--lb"
+---------------------------
+パンくずリスト
+---------------------------
+class="string--breadlist"
+---------------------------
+パンくずリスト(現在)
+---------------------------
+class="string--breadlist--now"
+---------------------------
+
+**********************************************************************************/
+
+/***************************************************
+*       変数宣言
+***************************************************/
+@import url("../css/VariableDeclaration.css");
+
+:root{
+
+    /*bg-size*/
+    --bg-height:25px;
+    --bg-width:100px;
+
+    /*padding-size(内側)*/
+    --bg-pad-up:0px;
+    --bg-pad-right:1px;
+    --bg-pad-under:4px;
+    --bg-pad-left:1px;
+
+    /*margin-size(外側)*/
+    --bg-margin-up:0px;
+    --bg-margin-right:0px;
+    --bg-margin-under:0px;
+    --bg-margin-left:0px;
+
+    /*text*/
+    --bg-text-align:center;
+}
+
+/***************************************************
+*       背景付文字(サイズ固定)
+***************************************************/
+.string--bg{
+    display: inline-block;
+    color: #fff;
+    background-color: var(--color-lb);
+    font-size: var(--font-size);
+    text-align: var(--bg-text-align);
+    padding: var(--bg-pad-up) var(--bg-pad-right) var(--bg-pad-under) var(--bg-pad-left);
+    margin: var(--bg-margin-up) var(--bg-margin-right) var(--bg-margin-under) var(--bg-margin-left);
+    height: var(--bg-height);
+
+    width: var(--bg-width);
+}
+
+/***************************************************
+*       背景付文字(サイズ可変ー文字フィット)
+***************************************************/
+.string--bg--fit{
+    display: inline-block;
+    color: #fff;
+    background-color: var(--color-lb);
+    font-size: var(--font-size);
+    text-align: var(--bg-text-align);
+    padding: var(--bg-pad-up) var(--bg-pad-right) var(--bg-pad-under) var(--bg-pad-left);
+    margin: var(--bg-margin-up) var(--bg-margin-right) var(--bg-margin-under) var(--bg-margin-left);
+    height: var(--bg-height);
+
+    width: fit-content;
+}
+
+/***************************************************
+*       通常文字(水色)
+***************************************************/
+.string--color--lb{
+    font-size: var(--font-size);
+    color: var(--color-lb);
+}
+
+/***************************************************
+*       パンくずリスト(過去)
+***************************************************/
+.string--breadlist{
+    font-size: 12px;
+    color:blue;
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+/***************************************************
+*       パンくずリスト(現在)
+***************************************************/
+.string--breadlist--now{
+    font-size: 12px;
+    color: black;
+    text-decoration: underline;
+}
