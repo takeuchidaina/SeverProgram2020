@@ -36,9 +36,10 @@ if( $ret != null ){
 
 ?>
 新規登録画面<br>
-<form method="POST" action="AMS/php/SignIn.php">
+<form method="POST" action="/AMS/php/The_Finish_OSIMAIDAYO.php">
   <p>名前:<input type="text" value="" name="Name_k" maxlength="12"></p>
   <p>よみがな:<input type="text" value="" name="Name_y" maxlength="12"></p>
+  <p>電話番号:<input type~"text" value"" name="Tel" maxlength="11"></p>
   <p>社員種別:<select name="Permissions" >
     <option value="General"> 社員 </option>
     <option value="Manager"> マネージャー</option>
@@ -49,20 +50,18 @@ if( $ret != null ){
   $ret = $pdo->query("select * from store");
     while($a = $ret->fetch(PDO::FETCH_ASSOC)){
       echo $a['Store_Num']." ".$a['Store_Name']."<br>";
-      echo "<option value=\"" . $a['Store_Num'] ." \" >". $a['Store_Name']."</option>";
+      echo "<option value=\"" . $a['Store_Num'] ."\">". $a['Store_Name']."</option>";
     }
       ?>
     </select>
   </p>
 
 
+
   <input type="submit" value="登録">
 </form>
-  <h3>ここから内容</h3>
 
+ここまで
 
-  <?php
-   echo "";
-    ?>
 </body>
 </html>

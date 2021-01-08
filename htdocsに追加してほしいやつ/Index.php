@@ -1,6 +1,6 @@
 <?php
 //define('_ROOT_DIR', __DIR__ . '/');
-session_start();
+//session_start();
 
 //デバッグ用
 //var_dump($_COOKIE["PHPSESSID"]);
