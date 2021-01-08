@@ -1,0 +1,71 @@
+/*ヘッダー部分*/
+.header{
+  width: 100%;        /*幅*/
+  /*display: table;     /*display→表示形式*/
+  table-layout: fixed;
+  text-align: center; /*中身のテキスト中央揃え*/
+}
+
+/*ヘッダー部分上*/
+.headline{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 80px;
+
+  background-color: #17a2e8;
+  color: white;
+}
+
+.headline .left{
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  -webkit-transform : translateY(-50%);
+  transform : translateY(-50%);
+}
+.headline .center{
+  position: absolute;
+  top: 50%;
+  -webkit-transform : translateY(-50%);
+  transform : translateY(-50%);
+}
+.headline .right{
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  -webkit-transform : translateY(-50%);
+  transform : translateY(-50%);
+}
+
+/*ヘッダー部分下*/
+.header_table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout:fixed;
+　display:table;
+}
+.header_table tr{
+}
+
+.header_table tr td{
+  text-align: center;
+  color:#17a2e8;
+  border: solid 2px #17a2e8
+}
+
+.header_table tr .logout{
+  color:#FCAD19;
+}
+
+/*
+.skyblue{
+  color: #17a2e8;
+}
+*/
+/*
+p {
+    width: 200px;
+    background: #CCC;
+}
+*/
