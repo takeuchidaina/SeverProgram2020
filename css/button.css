@@ -1,38 +1,42 @@
 /**********************************************************************************
 【概要】
-各種ボタン
+各種ボタンのデザイン
 
 【CSSの読み込み】
-<link rel="stylesheet" href="../css/button.css">
+HTML : <link rel="stylesheet" href="../css/Button.css">
+CSS  : @import url("../css/Button.css");
  
 【クラスの呼び出し】
-・オレンジ色
--------------------------------------------------------------------------------
-<button type="submit" class="button button--orange" autofocus=true>文字 </button>
--------------------------------------------------------------------------------
-・白色+オレンジ色
--------------------------------------------------------------------------------
-<button type="submit" class="button button--whiteOrange" autofocus=true>文字 </button>
--------------------------------------------------------------------------------
-・水色
--------------------------------------------------------------------------------
-<button type="submit" class="button button--lightblue" autofocus=true>文字 </button>
--------------------------------------------------------------------------------
-・白色+水色
--------------------------------------------------------------------------------
-<button type="submit" class="button button--whiteLightblue" autofocus=true>文字 </button>
--------------------------------------------------------------------------------
+----------------------   ---------------------------
+背景：オレンジ　文字：白    class="button--orange"
+----------------------   ---------------------------
+----------------------   ---------------------------
+背景：白　文字：オレンジ　 class="button--whiteOrange"
+----------------------   ---------------------------
+-----------------   ------------------------------
+背景：水　文字：白    class="button--lightblue"
+-----------------   ------------------------------
+-----------------   ------------------------------
+背景：白　文字：水　  class="button--whiteLightblue"
+-----------------   ------------------------------
+
+【呼び出し例】
+----------------------------------------------------------------------------------------------------
+<button type="submit" onfocus="this.blur();" class="button--lightblue" autofocus=true>文字 </button>
+----------------------------------------------------------------------------------------------------
+※呼び出しHTMLにonfocusの処理を入れるのは選択時に黒い淵を出さないため
 
 **********************************************************************************/
 
+@import url("../css/VariableDeclaration.css");  /*変数読み込み*/
+
 /***************************************************
-*
-*　　　　　　　　　オレンジのボタン
-*
+*                 オレンジのボタン
+*   色　bg:mynbOR border:none char:white
+*   
 ***************************************************/
 /*通常時*/
-.button--orange,
-a.button--orange {
+.button--orange{
   color: #fff;
   background-color: #f67e28;
   border-radius: 5px;
@@ -43,10 +47,9 @@ a.button--orange {
 }
 
 /*カーソルが乗っている時*/
-.button--orange:hover,
-a.button--orange:hover {
-  color: #fff;
+.button--orange:hover{
   background: #f59048;
+  color: #fff;
 }
 
 /***************************************************
@@ -55,8 +58,7 @@ a.button--orange:hover {
 *
 ***************************************************/
 /*通常時*/
-.button--whiteOrange,
-a.button--whiteOrange {
+.button--whiteOrange{
   color: #f67e28;
   background-color: #fff;
   border-radius: 5px;
@@ -68,10 +70,9 @@ a.button--whiteOrange {
 }
 
 /*カーソルが乗っている時*/
-.button--whiteOrange:hover,
-a.button--whiteOrange:hover {
+.button--whiteOrange:hover{
+  background: rgb(255, 239, 232);
   color: #f59048;
-  background: #fff;
 }
 
 /***************************************************
@@ -80,8 +81,7 @@ a.button--whiteOrange:hover {
 *
 ***************************************************/
 /*通常時*/
-.button--lightblue,
-a.button--lightblue {
+.button--lightblue{
   color: #fff;
   background-color: #00aaeb;
   border-radius: 5px;
@@ -92,10 +92,9 @@ a.button--lightblue {
 }
 
 /*カーソルが乗っている時*/
-.button--lightblue:hover,
-a.button--lightblue:hover {
-  color: #fff;
+.button--lightblue:hover{
   background: #33b4e7;
+  color: #fff;
 }
 
 /***************************************************
@@ -104,8 +103,7 @@ a.button--lightblue:hover {
 *
 ***************************************************/
 /*通常時*/
-.button--whiteLightblue,
-a.button--whiteLightblue {
+.button--whiteLightblue{
   color: #00aaeb;
   background-color: #fff;
   border-radius: 5px;
@@ -117,8 +115,7 @@ a.button--whiteLightblue {
 }
 
 /*カーソルが乗っている時*/
-.button--whiteLightblue:hover,
-a.button--whiteLightblue:hover {
-  color: #33b4e7;
-  background: #fff;
+.button--whiteLightblue:hover{
+  background: rgb(243, 247, 255);
+  color: #00aaeb;
 }
