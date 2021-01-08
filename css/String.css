@@ -1,0 +1,60 @@
+/**********************************************************************************
+【概要】
+文字のデザイン
+
+【CSSの読み込み】
+HTML : <link rel="stylesheet" href="../css/String.css">
+CSS  : @import url("../css/String.css");
+
+**********************************************************************************/
+
+@import url("../css/VariableDeclaration.css");  /*変数読み込み*/
+
+:root{
+
+    /*font-size*/
+    --bg-fontsize:18px;
+
+    /*bg-size*/
+    --bg-height:25px;
+    --bg-width:100px;
+
+    /*padding-size*/
+    --bg-pad-up:6px;
+    --bg-pad-right:10px;
+    --bg-pad-under:10px;
+    --bg-pad-left:10px;
+}
+
+.string--bg{
+    display: inline-block;
+    width: var(--bg-width);
+    height: var(--bg-height);
+    font-size: var(--bg-fontsize);
+    text-align: center;
+    padding: var(--bg-pad-up) var(--bg-pad-right) var(--bg-pad-under) var(--bg-pad-left);
+    margin: 2em 0;
+    color: var(--main-color);
+    background-color: #00aaeb;
+}
+
+.string--bg--fit{
+    display: inline-block;
+    width: fit-content;
+    height: var(--bg-height);
+    font-size: 18px;
+    text-align: center;
+    padding: var(--bg-pad-up) var(--bg-pad-right) var(--bg-pad-under) var(--bg-pad-left);
+    margin: 2em 0;
+    color: #fff;
+    background-color: #00aaeb;
+}
+
+.string--basic{
+    background: #fff;
+    color: black;
+}
+
+.string--blue{
+    color: #00aaeb;
+}
