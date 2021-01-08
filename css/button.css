@@ -5,20 +5,24 @@
 【CSSの読み込み】
 HTML : <link rel="stylesheet" href="../css/Button.css">
 CSS  : @import url("../css/Button.css");
- 
-【クラスの呼び出し】
-----------------------   ---------------------------
-背景：オレンジ　文字：白    class="button--orange"
-----------------------   ---------------------------
-----------------------   ---------------------------
-背景：白　文字：オレンジ　 class="button--whiteOrange"
-----------------------   ---------------------------
------------------   ------------------------------
-背景：水　文字：白    class="button--lightblue"
------------------   ------------------------------
------------------   ------------------------------
-背景：白　文字：水　  class="button--whiteLightblue"
------------------   ------------------------------
+
+【クラス一覧】
+背景：オレンジ　文字：白
+---------------------------
+class="button--orange"
+---------------------------
+背景：白　文字：オレンジ
+---------------------------
+class="button--whiteOrange"
+---------------------------
+背景：水　文字：白
+------------------------------
+class="button--lightblue"
+------------------------------
+背景：白　文字：水
+------------------------------
+class="button--whiteLightblue"
+------------------------------
 
 【呼び出し例】
 ----------------------------------------------------------------------------------------------------
@@ -28,94 +32,105 @@ CSS  : @import url("../css/Button.css");
 
 **********************************************************************************/
 
-@import url("../css/VariableDeclaration.css");  /*変数読み込み*/
+/***************************************************
+*   変数宣言
+***************************************************/
+@import url("../css/VariableDeclaration.css");
+
+:root{
+  /*border*/
+  --btn-border-rad:0px;
+
+  /*padding-size*/
+  --btn-pad-up:10px;
+  --btn-pad-right:15px;
+  --btn-pad-under:10px;
+  --btn-pad-left:15px;
+
+  /*text*/
+  --btn-text-align:center;
+  --btn-font-weight:none;
+
+}
 
 /***************************************************
-*                 オレンジのボタン
-*   色　bg:mynbOR border:none char:white
-*   
+*   背景：オレンジ　文字：白
 ***************************************************/
 /*通常時*/
 .button--orange{
   color: #fff;
-  background-color: #f67e28;
-  border-radius: 5px;
-  padding: 15px;
-  text-align: center;
+  background-color: var(--color-or);
+  border-radius: var(--btn-border-rad);
+  padding: var(--btn-pad-up) var(--btn-pad-right) var(--btn-pad-under) var(--btn-pad-left);
+  text-align: var(--btn-text-align);
+  font-weight: var(--btn-font-weight);
+
   border: none;
-  font-weight: bold;
 }
 
 /*カーソルが乗っている時*/
 .button--orange:hover{
-  background: #f59048;
-  color: #fff;
+  background-color: var(--color-or-act1);
 }
 
 /***************************************************
-*
-*　　　　　　　　　白＋オレンジのボタン
-*
+*   背景：白　文字：オレンジ
 ***************************************************/
 /*通常時*/
 .button--whiteOrange{
-  color: #f67e28;
+  color: var(--color-or);
   background-color: #fff;
-  border-radius: 5px;
-  padding: 15px;
-  text-align: center;
+  border-radius: var(--btn-border-rad);
+  padding: var(--btn-pad-up) var(--btn-pad-right) var(--btn-pad-under) var(--btn-pad-left);
+  text-align: var(--btn-text-align);
+  font-weight: var(--btn-font-weight);
+
   border-style: solid;
-  border-color: #f67e28;
-  font-weight: bold;
+  border-color: var(--color-or);
 }
 
 /*カーソルが乗っている時*/
 .button--whiteOrange:hover{
-  background: rgb(255, 239, 232);
-  color: #f59048;
+  background-color: var(--color-or-act2);
 }
 
 /***************************************************
-*
-*　　　　　　　　　水色のボタン
-*
+*   背景：水　文字：白
 ***************************************************/
 /*通常時*/
 .button--lightblue{
   color: #fff;
-  background-color: #00aaeb;
-  border-radius: 5px;
-  padding: 15px;
-  text-align: center;
+  background-color: var(--color-lb);
+  border-radius: var(--btn-border-rad);
+  padding: var(--btn-pad-up) var(--btn-pad-right) var(--btn-pad-under) var(--btn-pad-left);
+  text-align: var(--btn-text-align);
+  font-weight: var(--btn-font-weight);
+
   border: none;
-  font-weight: bold;
 }
 
 /*カーソルが乗っている時*/
 .button--lightblue:hover{
-  background: #33b4e7;
-  color: #fff;
+  background-color: var(--color-lb-act1);
 }
 
 /***************************************************
-*
-*　　　　　　　　　白＋水色のボタン
-*
+*   背景：白　文字：水
 ***************************************************/
 /*通常時*/
 .button--whiteLightblue{
-  color: #00aaeb;
+  color: var(--color-lb);
   background-color: #fff;
-  border-radius: 5px;
-  padding: 15px;
-  text-align: center;
+  border-radius: var(--btn-border-rad);
+  padding: var(--btn-pad-up) var(--btn-pad-right) var(--btn-pad-under) var(--btn-pad-left);
+  text-align: var(--btn-text-align);
+  font-weight: var(--btn-font-weight);
+
   border-style: solid;
-  border-color: #00aaeb;
-  font-weight: bold;
+  border-color: var(--color-lb);
 }
 
 /*カーソルが乗っている時*/
 .button--whiteLightblue:hover{
-  background: rgb(243, 247, 255);
-  color: #00aaeb;
+  background-color: var(--color-lb-act2);
 }

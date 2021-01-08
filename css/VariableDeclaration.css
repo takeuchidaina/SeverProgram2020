@@ -12,11 +12,11 @@ CSS : @import url("../css/VariableDeclaration.css");
 
     /*色*/
     --color-or:#f67e28;      /*マイナビのオレンジ色*/
-    --color-or-act:#f59048;  /*マイナビのオレンジ色　アクション時*/
+    --color-or-act1:#f59048; /*マイナビのオレンジ色　アクション時*/
+    --color-or-act2:rgb(255, 239, 232);     /*マイナビのオレンジ色　アクション時*/
     --color-lb:#00aaeb;      /*マイナビの水色*/
-    --color-lb-act:#33b4e7;  /*マイナビの水色　アクション時*/
-    --color-bread-list-past:blue;
-    --color-bread-list-now:black;
+    --color-lb-act1:#33b4e7; /*マイナビの水色　アクション時*/
+    --color-lb-act2:rgb(243, 247, 255);     /*マイナビの水色　アクション時*/
 
     /*フォント*/
     --font-family: "MS Pゴシック";

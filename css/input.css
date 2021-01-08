@@ -6,21 +6,30 @@
 HTML : <link rel="stylesheet" href="../css/Input.css">
 CSS  : @import url("../css/Input.css");
 
+【クラスの呼び出し】
+通常のinputが全て変わります
+通常通り使えばOK
+
 **********************************************************************************/
 
-@import url("../css/VariableDeclaration.css");  /*変数読み込み*/
+/***************************************************
+*       変数宣言
+***************************************************/
+@import url("../css/VariableDeclaration.css");
 
 input[type="text"]{
     border: 1px solid;
-    background:#fff;
-    border-color: #00aaeb;
-    height: 37px;
-    width: 160px;
+    border-color: var(--color-lb);
+    background-color:#fff;
+    
+    height: 25px;
+    width: 200px;
 }
 
 input[type="text"]:focus{
     border: 1px solid;
-    border-color: #00aaeb;
-    background:#fff;
-    outline: 0;
+    border-color: var(--color-lb);
+    background-color:#fff;
+
+    outline: none;
 }
