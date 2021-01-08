@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <header>
   <link rel="stylesheet" href="../css/header.css">
   <!--ヘッダー部分-->
@@ -6,7 +7,7 @@
     <div class="headline">
       <span class="left">
 
-        ログインID:<?php echo $_SESSION['NUM']; ?><br> <!--ID-->
+        ログインID:<?php echo sprintf("%06d",$_SESSION['ID']); ?><br> <!--ID-->
         名前：<?php echo $_SESSION['NAME']; ?>      <!--name-->
       </span>
 

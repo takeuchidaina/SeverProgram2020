@@ -13,6 +13,11 @@
 </form>
 
   <?php
+  session_start();
+  if(isset($_SESSION["LoginErr"])){
+    echo $_SESSION["LoginErr"];
+    unset($_SESSION["LoginErr"]);
+  }
    echo "";
     ?>
 </body>
