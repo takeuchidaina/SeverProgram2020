@@ -29,11 +29,14 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 //DBアクセス
 }catch(\Exception $e){
   echo $e -> getMessage() . PHP_EOL;
+  $_SESSION["LoginErr"] = $e -> getMessage() . PHP_EOL;
+  header('Location: http://localhost/index.php');
 }
 
 //IDが一致しない場合
 if (!isset($row['Employees_Num'])) {
   echo 'ID又はパスワードが間違っています。1';
+  $_SESSION["LoginErr"] = 'ID又はパスワードが間違っています。１';
   header('Location: http://localhost/index.php');
   //require '../../Index.php';
   return false;
@@ -46,9 +49,10 @@ if(password_verify($_POST['Pass'],$row['Password'])){
   $_SESSION['ID'] = $row['ID'];
   $_SESSION['NUM'] = $row['Employees_Num'];
   $_SESSION['NAME'] = $row['Name_Kanzi'];
-  require 'MyPage.php';
+  header('Location: http://localhost/AMS/php/MyPage.php');
 } else {
   echo 'ID又はパスワードが間違っています。2';
+  $_SESSION["LoginErr"] = 'ID又はパスワードが間違っています。２';
   header('Location: http://localhost/index.php');
   //require '../../Index.php';
   return false;
