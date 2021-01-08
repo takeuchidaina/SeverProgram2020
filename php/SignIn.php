@@ -34,7 +34,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 //IDが一致しない場合
 if (!isset($row['Employees_Num'])) {
   echo 'ID又はパスワードが間違っています。1';
-  require 'LogIn.php';
+  header('Location: http://localhost/index.php');
+  //require '../../Index.php';
   return false;
 }
 
@@ -46,7 +47,8 @@ if(password_verify($_POST['Pass'],$row['Password'])){
   require 'MyPage.php';
 } else {
   echo 'ID又はパスワードが間違っています。2';
-  require 'LogIn.php';
+  header('Location: http://localhost/index.php');
+  //require '../../Index.php';
   return false;
 }
 
