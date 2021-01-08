@@ -44,6 +44,8 @@ if (!isset($row['Employees_Num'])) {
 if(password_verify($_POST['Pass'],$row['Password'])){
   session_regenerate_id(true); //session_idを新しく生成し、置き換える
   $_SESSION['ID'] = $row['ID'];
+  $_SESSION['NUM'] = $row['Employees_Num'];
+  $_SESSION['NAME'] = $row['Name_Kanzi'];
   require 'MyPage.php';
 } else {
   echo 'ID又はパスワードが間違っています。2';

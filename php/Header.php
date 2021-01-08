@@ -5,8 +5,9 @@
     <!--ヘッダー部分上-->
     <div class="headline">
       <span class="left">
-        ログインID:○○○○<br> <!--ID-->
-        名前：山田太郎      <!--name-->
+
+        ログインID:<?php echo $_SESSION['NUM']; ?><br> <!--ID-->
+        名前：<?php echo $_SESSION['NAME']; ?>      <!--name-->
       </span>
 
       <span class="center">
