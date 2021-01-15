@@ -11,7 +11,7 @@ HTML : <link rel="stylesheet" href="../css/CSSReader.css">
 **********************************************************************************/
 
 /*cssファイルの読み込み*/
-@import url("../css/Button.css");   /* ボタン */
+@import url("../css/button.css");   /* ボタン */
 @import url("../css/String.css");   /* 文字の扱い */
-@import url("../css/Input.css");    /* 入力欄 */
+@import url("../css/input.css");    /* 入力欄 */
 @import url("../css/header.css");   /* ヘッダー */
