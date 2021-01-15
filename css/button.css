@@ -42,10 +42,10 @@ class="button--whiteLightblue"
   --btn-border-rad:0px;
 
   /*padding-size*/
-  --btn-pad-up:10px;
-  --btn-pad-right:15px;
-  --btn-pad-under:10px;
-  --btn-pad-left:15px;
+  --btn-pad-up:5px;
+  --btn-pad-right:8px;
+  --btn-pad-under:5px;
+  --btn-pad-left:8px;
 
   /*text*/
   --btn-text-align:center;
@@ -64,6 +64,7 @@ class="button--whiteLightblue"
   padding: var(--btn-pad-up) var(--btn-pad-right) var(--btn-pad-under) var(--btn-pad-left);
   text-align: var(--btn-text-align);
   font-weight: var(--btn-font-weight);
+  font-size: var(--font-size);
 
   border: none;
 }
@@ -84,6 +85,7 @@ class="button--whiteLightblue"
   padding: var(--btn-pad-up) var(--btn-pad-right) var(--btn-pad-under) var(--btn-pad-left);
   text-align: var(--btn-text-align);
   font-weight: var(--btn-font-weight);
+  font-size: var(--font-size);
 
   border-style: solid;
   border-color: var(--color-or);
@@ -105,6 +107,7 @@ class="button--whiteLightblue"
   padding: var(--btn-pad-up) var(--btn-pad-right) var(--btn-pad-under) var(--btn-pad-left);
   text-align: var(--btn-text-align);
   font-weight: var(--btn-font-weight);
+  font-size: var(--font-size);
 
   border: none;
 }
@@ -125,6 +128,7 @@ class="button--whiteLightblue"
   padding: var(--btn-pad-up) var(--btn-pad-right) var(--btn-pad-under) var(--btn-pad-left);
   text-align: var(--btn-text-align);
   font-weight: var(--btn-font-weight);
+  font-size: var(--font-size);
 
   border-style: solid;
   border-color: var(--color-lb);
