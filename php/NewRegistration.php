@@ -60,8 +60,12 @@ if( $ret != null ){
 
   <input type="submit" value="登録">
 </form>
-
-ここまで
+<?php
+if(isset($_SESSION["ErrLog"])){
+  echo $_SESSION["ErrLog"];
+  unset($_SESSION["ErrLog"]);
+}
+?>
 
 </body>
 </html>

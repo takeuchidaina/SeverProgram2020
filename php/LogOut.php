@@ -2,11 +2,12 @@
 
 session_start();
 $output = '';
-if (isset($_SESSION["id"])) {
+if (!isset($_SESSION["id"])) {
   $output = 'Logoutしました。';
 } else {
   $output = 'SessionがTimeoutしました。';
 }
+
 
 //セッション変数のクリア
 $_SESSION = array();
@@ -23,4 +24,7 @@ if (ini_get("session.use_cookies")) {
 
 
 echo $output;
+
+echo ' <a href= "../../index.php" ><br>ログイン画面へ<br></a> ';
+
  ?>

@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php
+session_start();
+if(!isset($_SESSION['ID'])){
+  $_SESSION["LoginErr"] = 'タイムアウトエラー';
+  header('Location: http://localhost/index.php');
+}
+
+ ?>
 <header>
   <link rel="stylesheet" href="../css/header.css">
   <!--ヘッダー部分-->
@@ -27,8 +34,8 @@
     <!--ヘッダー部分下-->
     <table class="header_table">
       <tr>
-        <td> 1 </td>
-        <td> 2 </td>
+        <td> <a href= "MyPage.php" >マイページ</a> </td>
+        <td> <a href= "NewRegistration.php" >新規会員登録</a> </td>
         <td> 3 </td>
         <td> 4 </td>
       </tr>
@@ -36,7 +43,7 @@
         <td> 5 </td>
         <td> 6 </td>
         <td> 7 </td>
-        <td class="logout"> ログアウト </td>
+        <td class="logout"> <a href= "LogOut.php" >ログアウト</a> </td>
       </tr>
     </table>
 

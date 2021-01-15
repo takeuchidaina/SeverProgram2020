@@ -8,8 +8,13 @@
 testetttttt
   <?php
 
-
 session_start();
+if($_POST["Name_k"] == '' || $_POST["Name_y"] == '' || $_POST["Permissions"] == '' || $_POST["Tel"] == ''){
+  $_SESSION["ErrLog"] = '必須項目未記入';
+  header('Location: http://localhost/AMS/php/NewRegistration.php');
+}
+
+
 
 require 'Init.php';
 
@@ -51,6 +56,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 }catch(\Exception $e){
 
 }
+
+
 
 /*
 //IDが一致しない場合

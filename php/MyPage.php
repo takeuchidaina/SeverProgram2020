@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>LogIn</title>
+<title>MyPage</title>
 </head>
 <body>
 <?php
