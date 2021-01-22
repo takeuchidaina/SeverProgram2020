@@ -29,6 +29,8 @@
   top: 50%;
   -webkit-transform : translateY(-50%);
   transform : translateY(-50%);
+  font-weight: bold;
+  font-size: 140%;
 }
 .headline .right{
   position: absolute;
