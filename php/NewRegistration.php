@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>NewRegistation</title>
+<link rel="stylesheet" href="../css/CSSReader.css">
+<link rel="stylesheet" href="../css/pulldownList.css">
 </head>
 <body>
 <?php
@@ -35,17 +37,17 @@ if( $ret != null ){
 }
 
 ?>
-新規登録画面<br>
+<h3 class="string--color--lb">新規登録画面<h3>
 <form method="POST" action="/AMS/php/The_Finish_OSIMAIDAYO.php">
-  <p>名前:<input type="text" value="" name="Name_k" maxlength="12"></p>
-  <p>よみがな:<input type="text" value="" name="Name_y" maxlength="12"></p>
-  <p>電話番号:<input type~"text" value"" name="Tel" maxlength="11"></p>
-  <p>社員種別:<select name="Permissions" >
+  <p><b class="string--bg--fit">名前　　　</b><input type="text" value="" name="Name_k" maxlength="12"></p>
+  <p><b class="string--bg--fit">よみがな　</b><input type="text" value="" name="Name_y" maxlength="12"></p>
+  <p><b class="string--bg--fit">電話番号　</b><input type="text" value="" name="Tel" maxlength="11"></p>
+  <p><b class="string--bg--fit">社員種別　</b><b>　</b><select class="pulldown-lb" name="Permissions">
     <option value="General"> 社員 </option>
     <option value="Manager"> マネージャー</option>
   </select>
   </p>
-  <p>所属店舗:<select name="BelongStoreNum">
+  <p><b class="string--bg--fit">所属店舗　</b><b>　</b><select class="pulldown-lb" name="BelongStoreNum">
     <?php
   $ret = $pdo->query("select * from store");
     while($a = $ret->fetch(PDO::FETCH_ASSOC)){
@@ -58,7 +60,7 @@ if( $ret != null ){
 
 
 
-  <input type="submit" value="登録">
+  <button type="submit" onfocus="this.blur();" class="button--orange" autofocus=true>　登録　 </button>
 </form>
 <?php
 if(isset($_SESSION["ErrLog"])){
