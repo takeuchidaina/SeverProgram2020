@@ -54,7 +54,18 @@
   border: solid 2px #17a2e8
 }
 
-.header_table tr .logout{
+/*文字関係*/
+
+a {
+  text-decoration: none;
+  color:#17a2e8;
+}
+
+a:hover{
+  color: blue;
+}
+
+.logout{
   color:#FCAD19;
 }
 

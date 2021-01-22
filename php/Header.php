@@ -1,11 +1,12 @@
+
 <?php
 session_start();
 if(!isset($_SESSION['ID'])){
   $_SESSION["LoginErr"] = 'タイムアウトエラー';
   header('Location: http://localhost/index.php');
 }
-
  ?>
+
 <header>
   <link rel="stylesheet" href="../css/header.css">
   <!--ヘッダー部分-->
@@ -36,14 +37,14 @@ if(!isset($_SESSION['ID'])){
       <tr>
         <td> <a href= "MyPage.php" >マイページ</a> </td>
         <td> <a href= "NewRegistration.php" >新規会員登録</a> </td>
-        <td> <a href= "AccountSetting.php" >アカウント管理</a> </td>
-        <td> 4 </td>
+        <td>  </td>
+        <td>  </td>
       </tr>
       <tr>
-        <td> 5 </td>
-        <td> 6 </td>
-        <td> 7 </td>
-        <td class="logout"> <a href= "LogOut.php" >ログアウト</a> </td>
+        <td> <a href= "EmployeePage.php" >社員個人ページ</a> </td>
+        <td> <a href= "WorkTimeView.php" >勤務時間統計</a> </td>
+        <td> <a href= "AccountSetting.php" >アカウント管理</a> </td>
+        <td> <a class="logout" href= "LogOut.php" >ログアウト</a> </td>
       </tr>
     </table>
 
