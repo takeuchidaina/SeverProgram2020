@@ -1,0 +1,32 @@
+/************************************
+使い方：
+<select class="pulldown--lightblue">
+<option value="選択肢1">選択肢1</option>
+<option value="選択肢2">選択肢2</option>
+</select>
+
+************************************/
+
+
+@import url("../css/VariableDeclaration.css");
+
+.pulldown-lb{
+  border-style: solid;
+  border-color: var(--color-lb);
+  color: var(--color-lb);
+  border-radius: 5px;
+}
+
+.pulldown{
+  border-style: solid;
+  /*border-color: var(--color-lb);
+  color: var(--color-lb);*/
+  border-radius: 5px;
+}
+
+.pulldown-or{
+  border-style: solid;
+  border-color: var(--color-or);
+  color: var(--color-or);
+  border-radius: 5px;
+}
