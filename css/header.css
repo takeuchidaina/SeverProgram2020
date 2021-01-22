@@ -56,16 +56,16 @@
 
 /*文字関係*/
 
-a {
+.header_table tr td a {
   text-decoration: none;
   color:#17a2e8;
 }
 
-a:hover{
+.header_table tr td a:hover{
   color: blue;
 }
 
-.logout{
+.header_table tr td .logout{
   color:#FCAD19;
 }
 
