@@ -29,6 +29,8 @@
   top: 50%;
   -webkit-transform : translateY(-50%);
   transform : translateY(-50%);
+  font-weight: bold;
+  font-size: 140%;
 }
 .headline .right{
   position: absolute;
@@ -54,7 +56,18 @@
   border: solid 2px #17a2e8
 }
 
-.header_table tr .logout{
+/*文字関係*/
+
+.header_table tr td a {
+  text-decoration: none;
+  color:#17a2e8;
+}
+
+.header_table tr td a:hover{
+  color: blue;
+}
+
+.header_table tr td .logout{
   color:#FCAD19;
 }
 
