@@ -25,6 +25,9 @@
   /*border-color: var(--color-lb);
   color: var(--color-lb);*/
   border-radius: 5px;
+  font-size: 15px;
+  margin: 2px;
+  padding: 4px;
 }
 
 .pulldown-or{
@@ -32,4 +35,7 @@
   border-color: var(--color-or);
   color: var(--color-or);
   border-radius: 5px;
+  font-size: 15px;
+  margin: 2px;
+  padding: 4px;
 }
