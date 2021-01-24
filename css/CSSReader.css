@@ -15,3 +15,13 @@ HTML : <link rel="stylesheet" href="../css/CSSReader.css">
 @import url("../css/String.css");   /* 文字の扱い */
 @import url("../css/input.css");    /* 入力欄 */
 @import url("../css/header.css");   /* ヘッダー */
+
+/**************************************************
+
+    【間接的に読み込めないCSS】
+    　・pulldown.css
+    　・Graph.css
+
+    このCSSはHTMLより直接呼んでください
+
+***************************************************/

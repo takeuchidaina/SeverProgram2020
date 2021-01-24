@@ -1,0 +1,209 @@
+/**********************************************************************************
+【概要】
+表のデザイン
+
+【CSSの読み込み】
+下記文章を<Head></Head>の中に記述
+●HTML
+<link rel="stylesheet" href="../css/Graph.css">
+●CSS
+@import url("../css/Graph.css");
+※このCSSはCSSReader.cssでは読み込めないため直接呼んでください
+
+【クラス一覧】
+色：単色　文字：中央
+---------------------------
+class="graph-n"
+---------------------------
+色：ストライプ　文字：中央
+---------------------------
+class="graph-s"
+---------------------------
+色：単色　文字：左寄せ
+---------------------------
+class="graph-n-l"
+---------------------------
+色：ストライプ　文字：左寄せ
+---------------------------
+class="graph-s-l"
+---------------------------
+
+【呼び出し例】
+<table class="graph-n">
+
+**********************************************************************************/
+
+/***************************************************
+*       変数宣言
+***************************************************/
+@import url("../css/VariableDeclaration.css");
+
+:root{
+    --pad-vartical:5px;
+    --pad-side:15px;
+
+    --color-dark:rgb(171, 237, 250);
+    --color-light:rgb(226, 250, 255);
+
+    --border-size:1px;
+    --border-size-head:2px;
+
+    --text-align:center;
+    --text-align-left:left;
+}
+
+/***************************************************
+*       ヘッダーのみ色付き　中央
+***************************************************/
+table.graph-n{
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: solid var(--border-size);
+    border-color: var(--color-lb);
+    table-layout: auto;
+  }
+
+  /*見出し*/
+  table.graph-n th{
+    background-color: var(--color-lb);
+    color: rgb(255, 255, 255);
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: var(--text-align);
+  }
+
+  /*一列*/
+  table.graph-n tr{
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  /*一マス*/
+  table.graph-n td{
+    font-weight: normal;
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: var(--text-align);
+    border: solid var(--border-size);
+    border-color: var(--color-lb);
+  }
+
+
+/***************************************************
+*       ストライプ　中央
+***************************************************/
+  table.graph-s{
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: solid var(--border-size);
+    border-color: #fff;
+    table-layout: auto;
+  }
+
+  /*見出し*/
+  table.graph-s th{
+    background-color: var(--color-lb);
+    color: rgb(255, 255, 255);
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: var(--text-align);
+    border: solid var(--border-size-head);
+    border-color: #fff;
+  }
+
+  /*一列*/
+  table.graph-s tr{
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: var(--text-align);
+    background-color: var(--color-dark);
+  }
+
+  /*一列ごとに色変えるやつ*/
+  table.graph-s tr:nth-child(odd){
+    background-color: var(--color-light);
+  }
+
+  /*一マス*/
+  table.graph-s td{
+    font-weight: normal;
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: var(--text-align);
+    border: solid var(--border-size-head);
+    border-color: #fff;
+  }
+
+  /***************************************************
+*       ヘッダーのみ色付き　左
+***************************************************/
+table.graph-n-l{
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: solid var(--border-size);
+    border-color: var(--color-lb);
+    table-layout: auto;
+  }
+
+  /*見出し*/
+  table.graph-n-l th{
+    background-color: var(--color-lb);
+    color: rgb(255, 255, 255);
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: var(--text-align-left);
+  }
+
+  /*一列*/
+  table.graph-n-l tr{
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  /*一マス*/
+  table.graph-n-l td{
+    font-weight: normal;
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: var(--text-align-left);
+    border: solid var(--border-size);
+    border-color: var(--color-lb);
+  }
+
+
+/***************************************************
+*       ストライプ　左
+***************************************************/
+  table.graph-s-l{
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: solid var(--border-size);
+    border-color: #fff;
+    table-layout: auto;
+  }
+
+  /*見出し*/
+  table.graph-s-l th{
+    background-color: var(--color-lb);
+    color: rgb(255, 255, 255);
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: var(--text-align-left);
+    border: solid var(--border-size-head);
+    border-color: #fff;
+  }
+
+  /*一列*/
+  table.graph-s-l tr{
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: var(--text-align-left);
+    background-color: var(--color-dark);
+  }
+
+  /*一列ごとに色変えるやつ*/
+  table.graph-s-l tr:nth-child(odd){
+    background-color: var(--color-light);
+  }
+
+  /*一マス*/
+  table.graph-s-l td{
+    font-weight: normal;
+    padding: var(--pad-vartical) var(--pad-side);
+    text-align: var(--text-align-left);
+    border: solid var(--border-size-head);
+    border-color: #fff;
+  }
