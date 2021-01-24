@@ -41,9 +41,9 @@ if (!isset($row['ID'])) {
 
 
 //if(password_verify($pass,$row['Password'])){
-  if(password_verify($_POST['OldPass'],$row['Password'])){
+  if(password_verify($_POST['OldPass'],$row['Employess_Password'])){
   $pass = password_hash($_POST['NewPass1'], PASSWORD_DEFAULT);
-  $sqlstr = 'update employees set First_Flag = false , Password = "' . $pass . '" where ID = '.$_SESSION['ID'].';';
+  $sqlstr = 'update employees set First_Flag = false , Employess_Password = "' . $pass . '" where ID = '.$_SESSION['ID'].';';
   $result = $pdo->query($sqlstr);
   $_SESSION["ErrLog"] = 'パスワードの変更完了';
   header('Location: http://localhost/AMS/php/AccountSetting.php');

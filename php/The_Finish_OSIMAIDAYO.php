@@ -24,7 +24,7 @@ $pdo = new PDO($_SESSION["_DSN"], $_SESSION["_DB_USER"], $_SESSION["_DB_PASS"]);
 //データベースアクセス用変数
 $pass = password_hash("abc123", PASSWORD_DEFAULT);
 
-$sqlstr = 'insert into employees values(0,444444,"' .
+$sqlstr = 'insert into employees values(0,"' .
   $_POST["Name_k"] .
   '","'.
   $_POST["Name_y"] .
@@ -54,7 +54,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 */
 }catch(\Exception $e){
-
+  echo $e -> getMessage() . PHP_EOL;
 }
 
 
