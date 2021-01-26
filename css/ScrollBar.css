@@ -10,7 +10,11 @@
 @import url("../css/ScrollBar.css");
 
 【クラス一覧】
-色：水色
+色：水色　位置：指定
+---------------------------
+class="scroll-lb"
+---------------------------
+色：水色　位置：右端
 ---------------------------
 class="scroll-lb"
 ---------------------------
@@ -34,8 +38,15 @@ class="scroll-lb"
 /***************************************************
 *       スクロールバー
 ***************************************************/
-.scroll-lb{
+.scroll-lb-set{
     width: var(--width);
+	height: var(--height);
+    overflow: auto;
+    padding-right: 20px;
+    scroll-snap-type: y;
+}
+
+.scroll-lb-right{
 	height: var(--height);
     overflow: auto;
     padding-right: 20px;
