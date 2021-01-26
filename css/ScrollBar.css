@@ -1,0 +1,71 @@
+/**********************************************************************************
+【概要】
+スクロールバーのデザイン
+
+【CSSの読み込み】
+下記文章を<Head></Head>の中に記述
+●HTML
+<link rel="stylesheet" href="../css/ScrollBar.css">
+●CSS
+@import url("../css/ScrollBar.css");
+
+【クラス一覧】
+色：水色　位置：指定
+---------------------------
+class="scroll-lb"
+---------------------------
+色：水色　位置：右端
+---------------------------
+class="scroll-lb"
+---------------------------
+
+【呼び出し例】
+<div class="scrollArea"> 内容　</div>
+**********************************************************************************/
+
+/***************************************************
+*       変数宣言
+***************************************************/
+@import url("../css/VariableDeclaration.css");
+
+:root{
+    --width:500px;
+    --height:200px;
+    --border-rad:5px;
+}
+
+
+/***************************************************
+*       スクロールバー
+***************************************************/
+.scroll-lb-set{
+    width: var(--width);
+	height: var(--height);
+    overflow: auto;
+    padding-right: 20px;
+    scroll-snap-type: y;
+}
+
+.scroll-lb-right{
+	height: var(--height);
+    overflow: auto;
+    padding-right: 20px;
+    scroll-snap-type: y;
+}
+
+/*スクロールバーの横幅指定*/
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/*スクロールバーの背景色・角丸指定*/
+::-webkit-scrollbar-track {
+    border-radius: var(--border-rad);
+    background: #f2f2f2;
+}
+
+/*スクロールバーの色・角丸指定*/
+::-webkit-scrollbar-thumb {
+    border-radius: var(--border-rad);
+    background: var(--color-lb);
+}
