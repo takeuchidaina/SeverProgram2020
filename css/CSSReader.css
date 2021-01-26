@@ -11,16 +11,20 @@ HTML : <link rel="stylesheet" href="../css/CSSReader.css">
 **********************************************************************************/
 
 /*cssファイルの読み込み*/
-@import url("../css/button.css");   /* ボタン */
-@import url("../css/String.css");   /* 文字の扱い */
-@import url("../css/input.css");    /* 入力欄 */
-@import url("../css/header.css");   /* ヘッダー */
+@import url("../css/button.css");       /* ボタン */
+@import url("../css/String.css");       /* 文字の扱い */
+@import url("../css/input.css");        /* 入力欄 */
+@import url("../css/header.css");       /* ヘッダー */
 
 /**************************************************
 
     【間接的に読み込めないCSS】
-    　・pulldown.css
+    　・pulldownList.css
+        <link rel="stylesheet" href="../css/pulldownList.css">
     　・Graph.css
+        <link rel="stylesheet" href="../css/Graph.css">
+    　・ScrollBar.css
+        <link rel="stylesheet" href="../css/ScrollBar.css">
 
     このCSSはHTMLより直接呼んでください
 

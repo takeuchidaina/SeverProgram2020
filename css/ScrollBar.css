@@ -10,13 +10,13 @@
 @import url("../css/ScrollBar.css");
 
 【クラス一覧】
-色：
+色：水色
 ---------------------------
-class=""
+class="scroll-lb"
 ---------------------------
 
 【呼び出し例】
-
+<div class="scrollArea"> 内容　</div>
 **********************************************************************************/
 
 /***************************************************
@@ -25,9 +25,36 @@ class=""
 @import url("../css/VariableDeclaration.css");
 
 :root{
-
+    --width:500px;
+    --height:200px;
+    --border-rad:5px;
 }
 
+
 /***************************************************
-*       
+*       スクロールバー
 ***************************************************/
+.scroll-lb{
+    width: var(--width);
+	height: var(--height);
+    overflow: auto;
+    padding-right: 20px;
+    scroll-snap-type: y;
+}
+
+/*スクロールバーの横幅指定*/
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/*スクロールバーの背景色・角丸指定*/
+::-webkit-scrollbar-track {
+    border-radius: var(--border-rad);
+    background: #f2f2f2;
+}
+
+/*スクロールバーの色・角丸指定*/
+::-webkit-scrollbar-thumb {
+    border-radius: var(--border-rad);
+    background: var(--color-lb);
+}
