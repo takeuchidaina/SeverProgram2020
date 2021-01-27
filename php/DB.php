@@ -1,6 +1,6 @@
 <?php
 
-Main();
+// Main();
 
 function Main(){
   $pdo = null;  // データベース接続

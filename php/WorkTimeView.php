@@ -11,7 +11,6 @@ require 'Header.php';
 ?>
 
 
-  <h3>ここから内容</h3>
   <h3 class="string--color--lb">勤務時間統計閲覧</h3>
 
 
