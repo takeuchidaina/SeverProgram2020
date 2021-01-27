@@ -103,31 +103,42 @@ if($_POST['Name'] != '' || $_POST['Store'] != ''){
   }
 */
 $tmp = 0;
-  echo "
-  <table class=\"graph-n-l\">
+?>
+  <table class="graph-n-l">
     <tr>
       <th>名前</th>
       <th>店舗</th>
+      <th>　　</th>
+      <th>　　</th>
     </tr>
-  ";
+<?php
 
   $res = $pdo->query($sqlstr);
 
   foreach ($res as $value) {
-  $tmp++;
+    $tmp++;
     $storeName = Search_Store_Name($pdo, $value['Belong_Store_Num']);
     //if($storeName != $_store_name) break;
     $KanziName = $value['Name_Kanzi'];
+    ?>
+      <tr>
+        <td><?php echo $KanziName ?></td>
+        <td><?php echo $storeName ?></td>
+        <td>
+          <form method="POST" action="/AMS/php/MyPage.php">
+            <button type="submit" onfocus="this.blur();" class="button--whiteOrange" autofocus=true>閲覧</button>
+          </form>
+        </td>
 
-
-    echo "
-    <tr>
-      <td>$KanziName</td>
-      <td>$storeName</td>
-    </tr>
-    ";
+        <td>
+          <form method="POST" action="/AMS/php/AccountDeleteReset.php">
+            <button type="submit" onfocus="this.blur();" class="button--whiteLightblue" autofocus=true>編集</button>
+          </form>
+        </td>
+      </tr>
+    <?php
   }
-
+  
   echo "</table>";
   echo $tmp.'件見つかりました';
 }
@@ -144,6 +155,6 @@ function Search_Store_Name($pdo, $_store_num){
   return $value;
 }
 
-    ?>
+  ?>
 </body>
 </html>
