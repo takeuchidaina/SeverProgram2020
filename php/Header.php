@@ -37,7 +37,7 @@ if(!isset($_SESSION['ID'])){
       <tr>
         <td> <a href= "MyPage.php" >マイページ</a> </td>
         <td> <a href= "NewRegistration.php" >新規会員登録</a> </td>
-        <td>  </td>
+        <td> <a herf= "EmployeeSearch.php" >社員検索ページ </td>
         <td>  </td>
       </tr>
       <tr>
