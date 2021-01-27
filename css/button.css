@@ -66,7 +66,8 @@ class="button--whiteLightblue"
   font-weight: var(--btn-font-weight);
   font-size: var(--font-size);
 
-  border: none;
+  border-style: solid;
+  border-color: var(--color-or);
 }
 
 /*カーソルが乗っている時*/
