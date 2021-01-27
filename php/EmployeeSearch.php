@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>EmployeeSearch</title>
 <link rel="stylesheet" href="../css/CSSReader.css">
+<link rel="stylesheet" href="../css/Graph.css">
 </head>
 <body>
 <?php
@@ -16,6 +17,7 @@ require 'Header.php';
     <p><b class="string--bg--fit">店舗</b><input type="text" value="" name="Store" maxlength="12"></p>
     <b><button type="submit" onfocus="this.blur();" class="button--orange" autofocus=true>　検索　 </button></b>
   </form>
+  <p> </p>
 
 
   <?php
@@ -102,7 +104,7 @@ if($_POST['Name'] != '' || $_POST['Store'] != ''){
 */
 $tmp = 0;
   echo "
-  <table border = '1'>
+  <table class=\"graph-n-l\">
     <tr>
       <th>名前</th>
       <th>店舗</th>
