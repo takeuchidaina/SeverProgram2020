@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>MyPage</title>
+<link rel="stylesheet" href="../css/CSSReader.css">
+<link rel="stylesheet" href="../css/Graph.css">
 </head>
 <body>
 <?php
@@ -11,7 +13,7 @@ require 'DB.php';
 ?>
 
 
-  <h3>シフト一覧</h3>
+  <h3 class="string--color--lb">シフト一覧</h3>
 
 
   <?php
@@ -33,7 +35,7 @@ require 'DB.php';
   $res = $pdo->query($sql);
 
   ?>
-  <table border = '1'>
+  <table class="graph-n-l">
     <tr>
       <th>日</th>
       <th>曜</th>

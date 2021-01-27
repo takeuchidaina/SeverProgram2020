@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>EmployeePage</title>
+<link rel="stylesheet" href="../css/CSSReader.css">
+<link rel="stylesheet" href="../css/Graph.css">
 </head>
 <body>
 <?php
@@ -11,8 +13,7 @@ require 'DB.php';
 ?>
 
 
-  <h3>ここから内容</h3>
-  <h3>社員の個人ページ</h3>
+  <h3 class="string--color--lb">社員の個人ページ</h3>
 
 
   <?php
@@ -34,7 +35,7 @@ require 'DB.php';
   $res = $pdo->query($sql);
 
   ?>
-  <table border = '1'>
+  <table class="graph-n-l">
     <tr>
       <th>日</th>
       <th>曜</th>
