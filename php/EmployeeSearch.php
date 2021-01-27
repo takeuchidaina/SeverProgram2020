@@ -143,6 +143,8 @@ $tmp = 0;
   echo $tmp.'件見つかりました';
 }
 
+//デバッグでIDを表示したい
+//そのIDで色々やる
 
 function Search_Store_Name($pdo, $_store_num){
   $sql = "select * from store where Store_Num = $_store_num";
@@ -155,6 +157,24 @@ function Search_Store_Name($pdo, $_store_num){
   return $value;
 }
 
-  ?>
+
+/*****************************************************************************
+関数：Search_Employees_Num($pdo, $_employees_name)
+概要：社員名から社員番号を検索する
+引数：データベース, 社員名前
+戻値：社員番号
+*****************************************************************************/
+function Search_Employees_Num($pdo, $_employees_name){
+  $sql = "select * from employees where Name_kanzi = $_employees_name";
+  $res = $pdo->query($sql);
+  $value = null;
+  foreach ($res as $tmp_value) {
+    $value = $tmp_value['ID'];
+  }
+
+  return $value;
+}
+
+?>
 </body>
 </html>
