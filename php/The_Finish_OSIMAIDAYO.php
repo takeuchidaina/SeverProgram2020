@@ -56,6 +56,8 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
 }catch(\Exception $e){
   echo $e -> getMessage() . PHP_EOL;
 }
+header('Location: http://localhost/AMS/php/NewRegistration.php');
+return false;
 
 
 
