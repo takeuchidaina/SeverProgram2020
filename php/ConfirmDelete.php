@@ -13,12 +13,19 @@ require 'DB.php';
 
 <h3 class="string--color--lb">アカウント削除確認</h3>
 
+<?php
+$storeName = $_POST["tmpStoreName"];
+$KanziName = $_POST["tmpKanziName"];
+?>
+
 <p>下記社員のデータを削除します</p>
-<div>店舗：<?php echo $_SESSION['tmpStoreName'] ?></div>
-<div>名前：<?php echo $_SESSION['tmpKanziName'] ?></div>
+<div>店舗：<?php echo $storeName; ?></div>
+<div>名前：<?php echo $KanziName; ?></div>
 <p></p>
 
 <form method="POST" action="/AMS/php/AccountDeleteProcess.php"  style="display: inline">
+  <input type="hidden" name="tmpStoreName" value= <?php echo $storeName; ?>>
+  <input type="hidden" name="tmpKanziName" value= <?php echo $KanziName; ?>>
   <button type="submit" onfocus="this.blur();" class="button--orange" autofocus=true>　確認　</button>
 </form>
 

@@ -3,8 +3,8 @@ session_start();
 
 //SQL文
 require 'DB.php';
-$name = $_SESSION['tmpKanziName'];
-$storeName = $_SESSION['tmpStoreName'];
+$name = $_POST["tmpKanziName"];
+$storeName = $_POST["tmpStoreName"];
 $newPW = "newPW";
 
 echo $name;

@@ -120,6 +120,7 @@ $tmp = 0;
     $storeName = Search_Store_Name($pdo, $value['Belong_Store_Num']);
     //if($storeName != $_store_name) break;
     $KanziName = $value['Name_Kanzi'];
+
     ?>
       <tr>
         <td><?php echo $KanziName ?></td>
@@ -132,6 +133,8 @@ $tmp = 0;
 
         <td>
           <form method="POST" action="/AMS/php/AccountDeleteReset.php">
+            <input type="hidden" name="tmpStoreName" value= <?php echo $storeName; ?>>
+            <input type="hidden" name="tmpKanziName" value= <?php echo $KanziName; ?>>
             <button type="submit" onfocus="this.blur();" class="button--whiteLightblue" autofocus=true>編集</button>
           </form>
         </td>
