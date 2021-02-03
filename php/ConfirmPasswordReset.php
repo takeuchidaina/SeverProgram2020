@@ -14,8 +14,8 @@ require 'DB.php';
 <h3 class="string--color--lb">パスワード初期化確認</h3>
 
 <p>下記社員のパスワードを初期化します</p>
-<div>店舗：店舗名</div>
-<div>名前：社員名</div>
+<div>店舗：<?php echo $_SESSION['tmpStoreName'] ?></div>
+<div>名前：<?php echo $_SESSION['tmpKanziName'] ?></div>
 <p></p>
 
 <form method="POST" action="/AMS/php/EmployeeSearch.php" style="display: inline">
