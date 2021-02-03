@@ -14,8 +14,8 @@ require 'DB.php';
 <h3 class="string--color--lb">アカウント管理</h3>
 
 <div><b class="string--color--or">対象社員名</b></div>
-<div>店舗：店舗名</div>
-<div>名前：社員名</div>
+<div>店舗：<?php echo $_SESSION['tmpStoreName'] ?></div>
+<div>名前：<?php echo $_SESSION['tmpKanziName'] ?></div>
 <p></p>
 
 <form method="POST" action="/AMS/php/ConfirmPasswordReset.php">
