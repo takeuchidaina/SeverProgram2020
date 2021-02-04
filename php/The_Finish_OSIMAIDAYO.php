@@ -53,6 +53,16 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
   echo $e -> getMessage() . PHP_EOL;
 }
 */
+
+//成功時IDPW表示用！
+$sqlstr2 = "select ID from employees ORDER BY ID DESC LIMIT 1";
+$result2 = $pdo->query($sqlstr2);
+foreach ($result2 as $val) {
+  $resultStr = $val['ID'];
+}
+
+$_SESSION["SuccessFlg"] = "Success!<br>IDは[$resultStr]、<br>初期PWは[abc123]です。";
+
 }catch(\Exception $e){
   echo $e -> getMessage() . PHP_EOL;
 }

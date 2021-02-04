@@ -67,6 +67,12 @@ if(isset($_SESSION["ErrLog"])){
   echo $_SESSION["ErrLog"];
   unset($_SESSION["ErrLog"]);
 }
+
+if(isset($_SESSION["SuccessFlg"])){
+  echo $_SESSION["SuccessFlg"];
+  unset($_SESSION["SuccessFlg"]);
+}
+
 ?>
 
 </body>
