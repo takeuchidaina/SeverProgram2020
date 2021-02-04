@@ -36,7 +36,7 @@ $StoreNum = $_POST["tmpStoreNum"];
 
 <p></p>
 <div class="string--color--lb">パスワードがリセットされるとデフォルトのパスワードに</div>
-<div class="string--color--lb">設定されデフォルトのパスワードは「PW社員番号6桁」になります。</div>
+<div class="string--color--lb">設定されデフォルトのパスワードは「abc123」になります。</div>
 
 </body>
 </html>
