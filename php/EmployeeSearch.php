@@ -135,6 +135,7 @@ $tmp = 0;
           <form method="POST" action="/AMS/php/AccountDeleteReset.php">
             <input type="hidden" name="tmpStoreName" value= <?php echo $storeName; ?>>
             <input type="hidden" name="tmpKanziName" value= <?php echo $KanziName; ?>>
+            <input type="hidden" name="tmpStoreNum" value= <?php echo $value['Belong_Store_Num']; ?>>
             <button type="submit" onfocus="this.blur();" class="button--whiteLightblue" autofocus=true>編集</button>
           </form>
         </td>
@@ -180,4 +181,10 @@ function Search_Employees_Num($pdo, $_employees_name){
 
 ?>
 </body>
+<?php
+  if(isset($_SESSION["ErrLog"])){
+    echo $_SESSION["ErrLog"];
+    unset($_SESSION["ErrLog"]);
+  }
+?>
 </html>

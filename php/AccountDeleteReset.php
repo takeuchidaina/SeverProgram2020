@@ -16,6 +16,7 @@ require 'DB.php';
 <?php
 $storeName = $_POST["tmpStoreName"];
 $KanziName = $_POST["tmpKanziName"];
+$StoreNum = $_POST["tmpStoreNum"];
 ?>
 
 <div><b class="string--color--or">対象社員名</b></div>
@@ -26,6 +27,7 @@ $KanziName = $_POST["tmpKanziName"];
 <form method="POST" action="/AMS/php/ConfirmPasswordReset.php">
   <input type="hidden" name="tmpStoreName" value= <?php echo $storeName; ?>>
   <input type="hidden" name="tmpKanziName" value= <?php echo $KanziName; ?>>
+  <input type="hidden" name="tmpStoreNum" value= <?php echo $StoreNum; ?>>
   <button type="submit" onfocus="this.blur();" class="button--whiteLightblue" autofocus=true>パスワードリセット</button>
 </form>
 対象社員のパスワードをリセットします。
@@ -35,6 +37,7 @@ $KanziName = $_POST["tmpKanziName"];
 <form method="POST" action="/AMS/php/ConfirmDelete.php">
   <input type="hidden" name="tmpStoreName" value= <?php echo $storeName; ?>>
   <input type="hidden" name="tmpKanziName" value= <?php echo $KanziName; ?>>
+  <input type="hidden" name="tmpStoreNum" value= <?php echo $StoreNum; ?>>
   <button type="submit" onfocus="this.blur();" class="button--whiteLightblue" autofocus=true>　アカウント削除　</button>
 </form>
 対象社員のアカウントを削除します。

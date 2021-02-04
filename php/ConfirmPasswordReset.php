@@ -16,6 +16,7 @@ require 'DB.php';
 <?php
 $storeName = $_POST["tmpStoreName"];
 $KanziName = $_POST["tmpKanziName"];
+$StoreNum = $_POST["tmpStoreNum"];
 ?>
 
 <p>下記社員のパスワードを初期化します</p>
@@ -24,8 +25,8 @@ $KanziName = $_POST["tmpKanziName"];
 <p></p>
 
 <form method="POST" action="/AMS/php/PasswordResetProcess.php" style="display: inline">
-  <input type="hidden" name="tmpStoreName" value= <?php echo $storeName; ?>>
   <input type="hidden" name="tmpKanziName" value= <?php echo $KanziName; ?>>
+  <input type="hidden" name="tmpStoreNum" value= <?php echo $StoreNum; ?>>
   <button type="submit" onfocus="this.blur();" class="button--orange" autofocus=true>　確認　</button>
 </form>
 
