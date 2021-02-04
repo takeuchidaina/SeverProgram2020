@@ -103,35 +103,52 @@ if($_POST['Name'] != '' || $_POST['Store'] != ''){
   }
 */
 $tmp = 0;
-  echo "
-  <table class=\"graph-n-l\">
+?>
+  <table class="graph-n-l">
     <tr>
       <th>名前</th>
       <th>店舗</th>
+      <th>　　</th>
+      <th>　　</th>
     </tr>
-  ";
+<?php
 
   $res = $pdo->query($sqlstr);
 
   foreach ($res as $value) {
-  $tmp++;
+    $tmp++;
     $storeName = Search_Store_Name($pdo, $value['Belong_Store_Num']);
     //if($storeName != $_store_name) break;
     $KanziName = $value['Name_Kanzi'];
 
+    ?>
+      <tr>
+        <td><?php echo $KanziName ?></td>
+        <td><?php echo $storeName ?></td>
+        <td>
+          <form method="POST" action="/AMS/php/MyPage.php">
+            <button type="submit" onfocus="this.blur();" class="button--whiteOrange" autofocus=true>閲覧</button>
+          </form>
+        </td>
 
-    echo "
-    <tr>
-      <td>$KanziName</td>
-      <td>$storeName</td>
-    </tr>
-    ";
+        <td>
+          <form method="POST" action="/AMS/php/AccountDeleteReset.php">
+            <input type="hidden" name="tmpStoreName" value= <?php echo $storeName; ?>>
+            <input type="hidden" name="tmpKanziName" value= <?php echo $KanziName; ?>>
+            <input type="hidden" name="tmpStoreNum" value= <?php echo $value['Belong_Store_Num']; ?>>
+            <button type="submit" onfocus="this.blur();" class="button--whiteLightblue" autofocus=true>編集</button>
+          </form>
+        </td>
+      </tr>
+    <?php
   }
-
+  
   echo "</table>";
   echo $tmp.'件見つかりました';
 }
 
+//デバッグでIDを表示したい
+//そのIDで色々やる
 
 function Search_Store_Name($pdo, $_store_num){
   $sql = "select * from store where Store_Num = $_store_num";
@@ -144,6 +161,30 @@ function Search_Store_Name($pdo, $_store_num){
   return $value;
 }
 
-    ?>
+
+/*****************************************************************************
+関数：Search_Employees_Num($pdo, $_employees_name)
+概要：社員名から社員番号を検索する
+引数：データベース, 社員名前
+戻値：社員番号
+*****************************************************************************/
+function Search_Employees_Num($pdo, $_employees_name){
+  $sql = "select * from employees where Name_kanzi = $_employees_name";
+  $res = $pdo->query($sql);
+  $value = null;
+  foreach ($res as $tmp_value) {
+    $value = $tmp_value['ID'];
+  }
+
+  return $value;
+}
+
+?>
 </body>
+<?php
+  if(isset($_SESSION["ErrLog"])){
+    echo $_SESSION["ErrLog"];
+    unset($_SESSION["ErrLog"]);
+  }
+?>
 </html>
