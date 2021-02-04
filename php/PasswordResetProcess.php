@@ -5,7 +5,7 @@ session_start();
 require 'DB.php';
 $name = $_POST["tmpKanziName"];
 $StoreNum = $_POST["tmpStoreNum"];
-$newPW = "newPW";
+$newPW = password_hash("abc123", PASSWORD_DEFAULT);
 
 
 try{
