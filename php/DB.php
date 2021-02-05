@@ -1,13 +1,62 @@
 <?php
 
-// Main();
+//Main();
 
 function Main(){
   $pdo = null;  // データベース接続
   $pdo = connectDB();
 
-  $tmp = 1234;
-  Employees_Name($pdo, 'アド', '', $tmp);
+  $now = new DateTime();
+
+
+  $arrayName[0] = array(new cShiftRequest($now));
+}
+
+class cShiftRequest{
+  public $day;
+  public $week;
+  public $free;
+  public $off;
+  public $in;
+  public $up;
+  public $memo;
+
+  function __construct($_date){
+    $day = (int)$_date->format('d');
+
+    //$datetime = new DateTime($value['IN_Time']);
+    $week = (int)$_date->format('w');
+    $weeks = array("日", "月", "火", "水", "木", "金", "土");
+    $week = $weeks[$week];
+
+    $free = false;
+
+    $off = false;
+
+    $in = null;
+
+    $up = null;
+
+    $memo = "";
+  }
+
+  function Input($_free, $_off, $_in, $_up, $_memo){
+    if($_free == true && $off == true){
+      return "FREEとOFFが設定されています。";
+    }
+
+    if($_free == false && $_off == false && $_in == null && $_up == null){
+      return "入力されていません。";
+    }
+
+    $free = $_free;
+    $off = $_off;
+    $in = $_in;
+    $up = $_up;
+    $memo = $_memo;
+
+    return 0;
+  }
 }
 
 /*****************************************************************************
@@ -33,6 +82,7 @@ function Employees_Name($pdo, $_employees_name, $_store_name, $_store_num){
   )
   ";
 
+
   $res = $pdo->query($sql);
 
   echo "
@@ -45,8 +95,8 @@ function Employees_Name($pdo, $_employees_name, $_store_name, $_store_num){
 
   foreach ($res as $value) {
 
-    $storeName = Search_Store_Name($pdo, $_store_num);
-    if($storeName != $_store_name) break;
+    $storeName = Search_Store_Name($pdo, $value['Belong_Store_Num']);
+    //if($storeName != $_store_name) break;
 
 
     echo "
@@ -257,7 +307,7 @@ function connectDB(){
 //ユーザ名やDBアドレスの定義
     $dsn = 'mysql:dbname=shift_management;host=localhost;charset=utf8';
     $username = 'root';
-    $password = '';
+    $password = 'yda474GAKUSEI';
 
     try {
         $pdo = new PDO($dsn, $username, $password);
