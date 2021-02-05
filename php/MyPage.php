@@ -5,6 +5,7 @@
 <title>MyPage</title>
 <link rel="stylesheet" href="../css/CSSReader.css">
 <link rel="stylesheet" href="../css/Graph.css">
+<link rel="stylesheet" href="../css/pulldownList.css">
 </head>
 <body>
 <?php
@@ -38,14 +39,14 @@ require 'DB.php';
     $month++;
   }
   echo '<form method="POST" action="/AMS/php/MyPage.php">';
-  echo '<select name="YM"> ';
+  echo '<select class="pulldown-lb" name="YM"> ';
   for($i=1 ; $i<4 ; $i++){
   //  echo $pullDownName[$i] ."<br>";
   $tmp = $pullDownValueY[$i] . sprintf('%02d', $pullDownValueM[$i]);
     echo "<option value=\"" . $tmp ."\">". $pullDownName[$i] ."</option>";
   }
   echo '</select>';
-  echo '<input type="submit" value="表示"></form>';
+  echo '<button type="submit" onfocus="this.blur();" class="button--orange" autofocus=true> 表示  </button></form>';
   echo '<br>';
 
   //var_dump($pullDownValueY);
@@ -59,7 +60,7 @@ require 'DB.php';
     $_month = $pullDownValueM[0];
   }else{
     $_year = $year;
-    $_month = $month;
+    $_month = $month - 3;
   }
   }
 
@@ -68,19 +69,20 @@ require 'DB.php';
   //$_month = '12';
   //$_year = '2020';
 
-
   $pdo = connectDB();
 
+  $id = $_SESSION['ID'];
   $sql = "
   select *
   from shift
   where Active_flag = true
-  and Employees_ID = 7
-  ";
+  and Employees_ID = $id
+  ORDER BY shift.IN_Time ASC";
 
   $res = $pdo->query($sql);
 
   ?>
+  
   <table class="graph-n-l">
     <tr>
       <th>日</th>
@@ -97,10 +99,10 @@ require 'DB.php';
   foreach ($res as $value) {
 
     $month = substr($value['IN_Time'], 5, 2);
-    if($month != $_month) break;
+    if($month != $_month) continue;
 
     $year = substr($value['IN_Time'], 0, 4);
-    if($year != $_year) break;
+    if($year != $_year) continue;
 
     $date = substr($value['IN_Time'], 8, 2);
 
@@ -115,7 +117,6 @@ require 'DB.php';
     $employeesName = Search_Employees_Name($pdo, $value['Input_Employees_ID']);
 
     ?>
-
 
     <tr>
       <td><?php echo "$date"; ?></td>
@@ -132,6 +133,6 @@ require 'DB.php';
   ?>
 
   </table>
-
+  
 </body>
 </html>
