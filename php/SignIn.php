@@ -9,7 +9,13 @@
   <?php
 
 
+
 session_start();
+if($_POST["ID"] == '' || $_POST["Pass"] == ''){
+  $_SESSION["LoginErr"] = '必須項目未記入';
+  header('Location: http://localhost/index.php');
+  return false;
+}
 
 require 'Init.php';
 
