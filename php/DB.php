@@ -307,7 +307,7 @@ function connectDB(){
 //ユーザ名やDBアドレスの定義
     $dsn = 'mysql:dbname=shift_management;host=localhost;charset=utf8';
     $username = 'root';
-    $password = 'yda474GAKUSEI';
+    $password = '';
 
     try {
         $pdo = new PDO($dsn, $username, $password);
